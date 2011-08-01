@@ -9,11 +9,6 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -101,14 +96,14 @@ if !exists(":DiffOrig")
         \ | wincmd p | diffthis
 endif
 
-set foldmethod=marker
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1 
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+
+set foldmethod=marker
+let g:miniBufExplMapWindowNavVim = 1 let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 nmap <silent> <F2> :NERDTreeToggle<CR>
 nmap <silent> <F3> :CommandT<CR>
 nmap <silent> <F5> :CommandTFlush<CR>
@@ -117,16 +112,8 @@ set showcmd
 set ruler
 set number
 
-set nobackup
-set nowritebackup
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
 set wildmode=list
 " Don't use Ex mode, use Q for formatting
-map Q gq
 
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.
@@ -227,31 +214,31 @@ nmap <C-K> <C-W><C-K>
 " Rails configuration
 autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
 autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
-autocmd User Rails map <Leader>p :Rstep 
-autocmd User Rails map <Leader>sp :RSstep 
-autocmd User Rails map <Leader>tp :RTstep 
-autocmd User Rails map <Leader>m :Rmodel 
-" autocmd User Rails map <Leader>c :Rcontroller 
-autocmd User Rails map <Leader>v :Rview 
-autocmd User Rails map <Leader>u :Runittest 
-autocmd User Rails map <Leader>f :Rfunctionaltest 
-autocmd User Rails map <Leader>i :Rintegrationtest 
-autocmd User Rails map <Leader>h :Rhelper 
-autocmd User Rails map <Leader>tm :RTmodel 
-autocmd User Rails map <Leader>tc :RTcontroller 
-autocmd User Rails map <Leader>tv :RTview 
-autocmd User Rails map <Leader>tu :RTunittest 
-autocmd User Rails map <Leader>tf :RTfunctionaltest 
-autocmd User Rails map <Leader>ti :RTintegrationtest 
-autocmd User Rails map <Leader>sm :RSmodel 
-autocmd User Rails map <Leader>sc :RScontroller 
-autocmd User Rails map <Leader>sv :RSview 
-autocmd User Rails map <Leader>su :RSunittest 
-autocmd User Rails map <Leader>sf :RSfunctionaltest 
-autocmd User Rails map <Leader>si :RSintegrationtest 
-autocmd User Rails map <Leader>g :Rconfig 
-autocmd User Rails map <Leader>sg :RSconfig 
-autocmd User Rails map <Leader>tg :RTconfig 
+autocmd User Rails map <Leader>p :Rstep
+autocmd User Rails map <Leader>sp :RSstep
+autocmd User Rails map <Leader>tp :RTstep
+autocmd User Rails map <Leader>m :Rmodel
+" autocmd User Rails map <Leader>c :Rcontroller
+autocmd User Rails map <Leader>v :Rview
+autocmd User Rails map <Leader>u :Runittest
+autocmd User Rails map <Leader>f :Rfunctionaltest
+autocmd User Rails map <Leader>i :Rintegrationtest
+autocmd User Rails map <Leader>h :Rhelper
+autocmd User Rails map <Leader>tm :RTmodel
+autocmd User Rails map <Leader>tc :RTcontroller
+autocmd User Rails map <Leader>tv :RTview
+autocmd User Rails map <Leader>tu :RTunittest
+autocmd User Rails map <Leader>tf :RTfunctionaltest
+autocmd User Rails map <Leader>ti :RTintegrationtest
+autocmd User Rails map <Leader>sm :RSmodel
+autocmd User Rails map <Leader>sc :RScontroller
+autocmd User Rails map <Leader>sv :RSview
+autocmd User Rails map <Leader>su :RSunittest
+autocmd User Rails map <Leader>sf :RSfunctionaltest
+autocmd User Rails map <Leader>si :RSintegrationtest
+autocmd User Rails map <Leader>g :Rconfig
+autocmd User Rails map <Leader>sg :RSconfig
+autocmd User Rails map <Leader>tg :RTconfig
 autocmd BufWritePost * :TlistUpdate
 
 nnoremap <Left> :echoe "Use h"<CR>
@@ -265,3 +252,14 @@ set fdm=syntax
 set nowrap
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+highlight ExtraWhitespace ctermbg=yellow guibg=yellow
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+
