@@ -16,11 +16,7 @@ set nocompatible
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
+set nobackup		" do not keep a backup file, use versions instead
 
 set noswapfile
 set history=50		" keep 50 lines of command line history
@@ -101,7 +97,8 @@ set shiftwidth=2
 set softtabstop=2
 
 set foldmethod=marker
-let g:miniBufExplMapWindowNavVim = 1 let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 nmap <silent> <F2> :NERDTreeToggle<CR>
