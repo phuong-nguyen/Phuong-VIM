@@ -5,10 +5,8 @@
   ci = commit
   co = checkout
   st = status
-  lg = log --color -n  5
-  lgg = log --graph --color -n 10
-  logl = log --pretty=oneline --abbrev-commit --color
-  ws = diff --check
+  lg = log --oneline --decorate -n 20
+  wd = diff --color-words
   dc = diff --cached
 [github]
   user = phuongnd08
