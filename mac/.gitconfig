@@ -1,0 +1,32 @@
+[user]
+  name = Phuong Nguyen
+  email = phuongnd08@gmail.com
+[alias]
+  ci = commit
+  co = checkout
+  st = status --short
+  lg = log --oneline --decorate -n 20
+  wd = diff --color-words
+  dc = diff --cached
+[github]
+  user = phuongnd08
+[color]
+  diff = auto
+  status = auto
+[color "status"]
+  changed = yellow
+  added = green
+  untracked = red
+[diff]
+  tool = kdiff3
+[difftool "kdiff3"]
+  cmd = kdiff3\"$LOCAL\" \"$REMOTE\"
+[mergetool "kdiff3"]
+  trustexitcode = false
+  cmd = kdiff3 --merge --result=$MERGED $LOCAL $BASE $REMOTE
+[merge]
+  tool = kdiff3
+[mergetool]
+  keepBackup = false
+[core]
+  editor = /usr/local/bin/vim
