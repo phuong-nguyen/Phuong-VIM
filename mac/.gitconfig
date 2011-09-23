@@ -29,4 +29,4 @@
 [mergetool]
   keepBackup = false
 [core]
-  editor = /usr/local/bin/vim
+  editor = /usr/bin/vim
