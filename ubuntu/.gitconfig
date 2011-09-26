@@ -4,7 +4,7 @@
 [alias]
   ci = commit
   co = checkout
-  st = status
+  st = status --short
   lg = log --oneline --decorate -n 20
   wd = diff --color-words
   dc = diff --cached
