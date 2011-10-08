@@ -6,8 +6,9 @@
   co = checkout
   st = status --short
   lg = log --oneline --decorate -n 20
-  wd = diff --color-words
+  wd = diff --word-diff
   dc = diff --cached
+  wdc = diff --cached --word-diff
 [github]
   user = phuongnd08
 [color]
