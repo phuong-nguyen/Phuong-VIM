@@ -107,7 +107,8 @@ set showcmd
 set ruler
 set number
 
-set wildmode=list
+set wildmode=longest,list,full
+set wildmenu
 " Don't use Ex mode, use Q for formatting
 
 " This is an alternative that also works in block mode, but the deleted
