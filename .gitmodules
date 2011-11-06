@@ -4,3 +4,6 @@
 [submodule "ubuntu/.vim/bundle/puppet"]
 	path = ubuntu/.vim/bundle/puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "ubuntu/.vim/bundle/snippetsEmu"]
+	path = ubuntu/.vim/bundle/snippetsEmu
+	url = git://github.com/vim-scripts/snippetsEmu.git
