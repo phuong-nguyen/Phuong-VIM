@@ -19,3 +19,6 @@
 [submodule "ubuntu/.vim/bundle/minibufexpl.vim"]
 	path = ubuntu/.vim/bundle/minibufexpl.vim
 	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "ubuntu/.vim/bundle/ack.vim"]
+	path = ubuntu/.vim/bundle/ack.vim
+	url = git://github.com/mileszs/ack.vim.git
