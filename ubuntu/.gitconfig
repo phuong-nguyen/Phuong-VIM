@@ -9,6 +9,8 @@
   wd = diff --word-diff
   dc = diff --cached
   wdc = diff --cached --word-diff
+  pom = push origin master
+  po = push origin
 [github]
   user = phuongnd08
 [color]
