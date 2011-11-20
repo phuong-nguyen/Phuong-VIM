@@ -10,3 +10,6 @@
 [submodule "ubuntu/.vim/bundle/vim-rails"]
 	path = ubuntu/.vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
+[submodule "ubuntu/.vim/bundle/greplace.vim"]
+	path = ubuntu/.vim/bundle/greplace.vim
+	url = git://github.com/skwp/greplace.vim.git
