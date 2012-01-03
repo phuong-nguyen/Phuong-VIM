@@ -3,12 +3,17 @@
   email = phuongnd08@gmail.com
 [alias]
   ci = commit
+  ca = commit --amend
   co = checkout
+  br = branch
   st = status --short
   lg = log --oneline --decorate -n 20
   wd = diff --word-diff
   wdc = diff --word-diff --cached
   dc = diff --cached
+  pom = push origin master
+  ru = remote update
+  ruo = remote update origin
 [github]
   user = phuongnd08
 [color]
