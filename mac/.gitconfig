@@ -12,8 +12,10 @@
   wdc = diff --word-diff --cached
   dc = diff --cached
   pom = push origin master
+  phm = push heroku master
   ru = remote update
   ruo = remote update origin
+  pim = push internal master
 [github]
   user = phuongnd08
 [color]
