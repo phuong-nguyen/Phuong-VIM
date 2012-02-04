@@ -200,3 +200,5 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+au BufNewFile,BufReadPost *.coffee* setl foldmethod=indent
