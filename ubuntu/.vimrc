@@ -145,6 +145,7 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+cmap <C-W> <C-R>=expand("<cword>") <CR>
 
 " Duplicate a selection
 " Visual mode: D
@@ -200,5 +201,8 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+map <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>i
 
 au BufNewFile,BufReadPost *.coffee* setl foldmethod=indent
