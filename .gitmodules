@@ -13,12 +13,12 @@
 [submodule "ubuntu/.vim/bundle/greplace.vim"]
 	path = ubuntu/.vim/bundle/greplace.vim
 	url = git://github.com/skwp/greplace.vim.git
-[submodule "ubuntu/.vim/bundle/Command-T"]
-	path = ubuntu/.vim/bundle/Command-T
-	url = git://github.com/wincent/Command-T.git
 [submodule "ubuntu/.vim/bundle/minibufexpl.vim"]
 	path = ubuntu/.vim/bundle/minibufexpl.vim
 	url = git://github.com/fholgado/minibufexpl.vim.git
 [submodule "ubuntu/.vim/bundle/ack.vim"]
 	path = ubuntu/.vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "ubuntu/.vim/bundle/contrlp.vim"]
+	path = ubuntu/.vim/bundle/contrlp.vim
+	url = git://github.com/kien/ctrlp.vim

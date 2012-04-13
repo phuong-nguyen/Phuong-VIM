@@ -100,8 +100,6 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 nmap <silent> <F2> :NERDTreeToggle<CR>
-nmap <silent> <F3> :CommandT<CR>
-nmap <silent> <F5> :CommandTFlush<CR>
 let g:CommandTMatchWindowAtTop = 1
 set showcmd
 set ruler
