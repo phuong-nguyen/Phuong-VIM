@@ -22,3 +22,6 @@
 [submodule "ubuntu/.vim/bundle/ack.vim"]
 	path = ubuntu/.vim/bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "ubuntu/.vim/bundle/vim-largefile"]
+	path = ubuntu/.vim/bundle/vim-largefile
+	url = https://github.com/gmunkhbaatarmn/vim-largefile.git
