@@ -165,10 +165,7 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <C-s> <Esc>:w<CR>
 
-nnoremap <silent> <F3> :CommandT<CR>
-nnoremap <silent> <F5> :CommandTFlush<CR>
 nmap <F2> :NERDTreeToggle<CR>
-let g:CommandTMatchWindowAtTop=1
 let g:buftabs_in_statusline=1
 let g:buftabs_active_highlight_group="Visual"
 set hidden
