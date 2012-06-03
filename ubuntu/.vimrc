@@ -204,3 +204,6 @@ map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>i
 
 au BufNewFile,BufReadPost *.coffee* setl foldmethod=indent
+"Quickly escape using jk
+:imap jk <Esc>
+:imap kj <Esc>
