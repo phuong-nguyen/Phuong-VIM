@@ -207,3 +207,4 @@ au BufNewFile,BufReadPost *.coffee* setl foldmethod=indent
 "Quickly escape using jk
 :imap jk <Esc>
 :imap kj <Esc>
+set nofoldenable
