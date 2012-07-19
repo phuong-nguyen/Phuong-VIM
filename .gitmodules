@@ -25,3 +25,6 @@
 [submodule "ubuntu/.vim/bundle/contrlp.vim"]
 	path = ubuntu/.vim/bundle/contrlp.vim
 	url = git://github.com/kien/ctrlp.vim
+[submodule "ubuntu/.vim/bundle/vim-align"]
+	path = ubuntu/.vim/bundle/vim-align
+	url = git://github.com/tsaleh/vim-align.git
