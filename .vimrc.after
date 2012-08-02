@@ -1,0 +1,78 @@
+set nobackup		" do not keep a backup file, use versions instead
+set noswapfile
+set history=50		" keep 50 lines of command line history
+
+if has("gui_running")
+  set gfn=Monospace\ 8
+endif
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
+set foldmethod=marker
+nmap <silent> <F2> :NERDTreeToggle<CR>
+set wildmode=longest,list,full
+set wildmenu
+
+" Hide search highlighting
+map <Leader>l :set invhls <CR>
+
+" Opens an edit command with the path of the currently edited file filled in
+" Normal mode: <Leader>e
+map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Inserts the path of the currently edited file into a command
+" Command mode: Ctrl+P
+cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+cmap <C-W> <C-R>=expand("<cword>") <CR>
+
+" Duplicate a selection
+" Visual mode: D
+vmap D y'>p
+
+" No Help, please
+nmap <F1> <Esc>
+
+" Press ^F from insert mode to insert the current file name
+imap <C-F> <C-R>=expand("%")<CR>
+
+" Color scheme
+"colorscheme vividchalk
+colorscheme mustang
+highlight NonText guibg=#060606
+highlight Folded  guibg=#0A0A0A guifg=#9090D0
+
+" Numbers
+set number
+set numberwidth=5
+
+" Window navigation
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+highlight ExtraWhitespace ctermbg=yellow guibg=yellow
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+map <C-s> :w<CR>
+imap <C-s> <Esc>:w<CR>i
+
+"Quickly escape using jk
+:imap jk <Esc>
+:imap kj <Esc>
+set nofoldenable
+
+noremap R "_d
+
+let g:localvimrc_ask=0

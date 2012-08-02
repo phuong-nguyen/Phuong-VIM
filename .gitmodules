@@ -28,3 +28,6 @@
 [submodule "ubuntu/.vim/bundle/vim-align"]
 	path = ubuntu/.vim/bundle/vim-align
 	url = git://github.com/tsaleh/vim-align.git
+[submodule "ubuntu/.vim/bundle/lim-localvimrc"]
+	path = ubuntu/.vim/bundle/lim-localvimrc
+	url = git://github.com/embear/vim-localvimrc.git
