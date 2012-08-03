@@ -50,6 +50,8 @@ set numberwidth=5
 " Window navigation
 nmap <C-J> <C-W><C-J>
 nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
 
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
