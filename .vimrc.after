@@ -74,3 +74,5 @@ set nofoldenable
 noremap R "_d
 
 let g:localvimrc_ask=0
+
+set noic
