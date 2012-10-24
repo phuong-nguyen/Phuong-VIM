@@ -24,14 +24,14 @@
   added = green
   untracked = red
 [diff]
-  tool = meld
-[difftool "meld"]
-  cmd = meld\"$LOCAL\" \"$REMOTE\"
-[mergetool "meld"]
+  tool = diffmerge
+[difftool "diffmerge"]
+  cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool "diffmerge"]
   trustexitcode = false
-  cmd = meld --merge --result=$MERGED $LOCAL $BASE $REMOTE
+  cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
 [merge]
-  tool = meld
+  tool = diffmerge
 [mergetool]
   keepBackup = false
 [core]
