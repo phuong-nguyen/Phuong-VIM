@@ -31,3 +31,6 @@
 [submodule "ubuntu/.vim/bundle/lim-localvimrc"]
 	path = ubuntu/.vim/bundle/lim-localvimrc
 	url = git://github.com/embear/vim-localvimrc.git
+[submodule ".janus/vim-indent-guides"]
+	path = .janus/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
