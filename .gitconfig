@@ -2,7 +2,7 @@
   name = Phuong Nguyen
   email = phuongnd08@gmail.com
 [alias]
-  br = git rev-parse --abbrev-ref HEAD
+  br = rev-parse --abbrev-ref HEAD
   ci = commit
   co = checkout
   st = status --short
