@@ -34,3 +34,6 @@
 [submodule ".janus/vim-indent-guides"]
 	path = .janus/vim-indent-guides
 	url = git://github.com/nathanaelkane/vim-indent-guides.git
+[submodule ".janus/vim-jst"]
+	path = .janus/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
