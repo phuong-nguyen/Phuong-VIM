@@ -5,7 +5,6 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-set foldmethod=marker
 nmap <silent> <F2> :NERDTreeToggle<CR>
 set wildmode=longest,list,full
 set wildmenu
@@ -68,10 +67,14 @@ imap <C-s> <Esc>:w<CR>i
 "Quickly escape using jk
 :imap jk <Esc>
 :imap kj <Esc>
-set nofoldenable
+
+"set nofoldenable
+set foldmethod=syntax
 
 noremap R "_d
 
 let g:localvimrc_ask=0
 
 set noic
+
+au BufNewFile,BufRead *.template			set filetype=html
